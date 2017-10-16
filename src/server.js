@@ -9,7 +9,8 @@ const app = express()
 const apiRouter = express.Router()
 
 // We declare a router, but if not conected to our app whichi is actually listening for something, nothing will happen
-apiRouter.get('/', (req, res) => res.json({api:true}))
+apiRouter.get('/', (req, res) => res.json({api: true}))
+apiRouter.get('*', (req, res) => res.json({apiAll: true}))
 
 setupMiddware(app)
 connect()
