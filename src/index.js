@@ -5,6 +5,7 @@ import { createServer } from 'http'
 import app from './server'
 // import schema from './schema'
 
+// We use http module to consume the express app (useful for websocket and hot module reloading)
 const server = http.createServer(app)
 let currentApp = app
 
